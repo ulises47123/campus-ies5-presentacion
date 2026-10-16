@@ -4,10 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Formulario — Campus Virtual IES N°&nbsp;5</title>
+<!--
+  Los botones "Completar el formulario" llevan a esta página, que abre el formulario de Google Forms.
+  El formulario se abre directo (no dentro de la página) porque guarda el correo de forma automática,
+  y para eso Google pide iniciar sesión, cosa que no funciona dentro de un recuadro.
+  Para cambiar de formulario, reemplazar el link en los tres lugares de este archivo.
+-->
+<meta http-equiv="refresh" content="0; url=https://docs.google.com/forms/d/e/1FAIpQLSff4-iwIFaaiEsIMyOROQ0C3b_1ErRvsZPxDGBJff3dT7zqkQ/viewform">
+<script>
+  // replace: así el botón "atrás" del celular vuelve a la página del proyecto y no a esta.
+  location.replace("https://docs.google.com/forms/d/e/1FAIpQLSff4-iwIFaaiEsIMyOROQ0C3b_1ErRvsZPxDGBJff3dT7zqkQ/viewform");
+</script>
 <link rel="icon" href="escudo_ies5.png">
 <link rel="stylesheet" href="estilos.css">
 </head>
-<body class="pagina-form">
+<body>
 
 <header class="barra">
   <div class="contenedor barra__inner">
@@ -18,83 +29,9 @@
 </header>
 
 <main class="contenedor seccion">
-  <h1 class="form-titulo">Formulario</h1>
-  <p class="aviso">Formulario en preparación: las preguntas definitivas todavía no están cerradas. Las respuestas aún no se envían a ningún lado.</p>
-
-  <!--
-    Para conectarlo más adelante:
-    - Google Forms: reemplazar este <form> por el <iframe> que da Google ("Enviar" → icono < >).
-    - Otro servicio (Formspree, etc.): poner su dirección en action="" y method="post".
-  -->
-  <form id="formulario" class="form" action="" method="post" novalidate>
-    <fieldset>
-      <legend>Sobre vos</legend>
-      <label>Nombre (opcional)
-        <input type="text" name="nombre" autocomplete="name">
-      </label>
-      <label>Rol en el instituto
-        <select name="rol" required>
-          <option value="">Elegí una opción</option>
-          <option>Estudiante</option>
-          <option>Docente</option>
-          <option>Administración</option>
-          <option>Otro</option>
-        </select>
-      </label>
-      <label>Carrera
-        <input type="text" name="carrera">
-      </label>
-    </fieldset>
-
-    <fieldset>
-      <legend>Tu experiencia con el campus</legend>
-      <p class="pregunta">¿Con qué frecuencia entrás al campus virtual?</p>
-      <div class="opciones">
-        <label><input type="radio" name="frecuencia" value="diario"> Todos los días</label>
-        <label><input type="radio" name="frecuencia" value="semanal"> Algunas veces por semana</label>
-        <label><input type="radio" name="frecuencia" value="poco"> Pocas veces</label>
-      </div>
-      <p class="pregunta">¿Alguna vez se te pasó una fecha de entrega?</p>
-      <div class="opciones">
-        <label><input type="radio" name="vencimiento" value="si"> Sí</label>
-        <label><input type="radio" name="vencimiento" value="no"> No</label>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Sobre el programa</legend>
-      <p class="pregunta">¿Qué secciones te resultan más útiles?</p>
-      <div class="opciones">
-        <label><input type="checkbox" name="secciones" value="escritorio"> Escritorio</label>
-        <label><input type="checkbox" name="secciones" value="materias"> Materias</label>
-        <label><input type="checkbox" name="secciones" value="actividades"> Actividades</label>
-        <label><input type="checkbox" name="secciones" value="novedades"> Novedades</label>
-        <label><input type="checkbox" name="secciones" value="asistente"> Asistente</label>
-      </div>
-      <label>¿Qué te gustaría que el programa haga?
-        <textarea name="sugerencias" rows="4"></textarea>
-      </label>
-    </fieldset>
-
-    <button type="submit" class="boton">Enviar</button>
-    <p id="estado" class="estado" role="status"></p>
-  </form>
+  <h1 class="form-titulo">Abriendo el formulario…</h1>
+  <p>Si no se abre solo, <a href="https://docs.google.com/forms/d/e/1FAIpQLSff4-iwIFaaiEsIMyOROQ0C3b_1ErRvsZPxDGBJff3dT7zqkQ/viewform">tocá acá para ir al formulario</a>.</p>
 </main>
 
-<footer class="pie">
-  <div class="contenedor">
-    <p>Tecnicatura Superior en Soporte de Infraestructura de Tecnología de la Información · IES N°&nbsp;5 “José Eugenio Tello” · 2026</p>
-  </div>
-</footer>
-
-<script>
-  // Mientras el formulario no esté conectado a un servicio, solo se avisa al usuario.
-  document.getElementById("formulario").addEventListener("submit", function (e) {
-    if (this.getAttribute("action")) return;
-    e.preventDefault();
-    document.getElementById("estado").textContent =
-      "¡Gracias! El formulario todavía está en preparación, así que esta respuesta no se guardó.";
-  });
-</script>
 </body>
 </html>
