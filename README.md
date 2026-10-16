@@ -6,6 +6,10 @@ Instituto de Educación Superior N° 5 "José Eugenio Tello" (San Salvador de Ju
 
 👉 Ver la página: https://ulises47123.github.io/campus-ies5-presentacion/
 
+⬇️ Descargar el programa (Windows 10/11, 64 bits): https://github.com/ulises47123/campus-ies5-presentacion/releases/latest/download/CampusVirtualIES5-64bit.exe
+— el ejecutable se publica como *release* del repositorio (no va dentro de los archivos de la página).
+Para subir una versión nueva: crear otro release con un archivo del mismo nombre y el link de la página sigue funcionando.
+
 ## De qué se trata
 Un programa para Windows que reúne en una sola ventana las materias, clases, tareas,
 calificaciones, mensajes y novedades del Campus Virtual del IES N° 5. Entra al campus
