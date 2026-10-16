@@ -163,7 +163,7 @@ img { max-width: 100%; height: auto; }
 .lista-check { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .lista-check li { padding-left: 30px; position: relative; }
 /* \FE0E pide el tilde como texto: sin eso, algunos celulares lo dibujan como emoji y no toma el color */
-.lista-check li::before { content: "¹4\FE0E"; position: absolute; left: 0; color: var(--azul); font-weight: 700; }
+.lista-check li::before { content: "\2714\FE0E"; position: absolute; left: 0; color: var(--azul); font-weight: 700; }
 
 .lista-punto { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .lista-punto li { padding-left: 24px; position: relative; }
