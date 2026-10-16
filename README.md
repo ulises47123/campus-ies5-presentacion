@@ -22,6 +22,8 @@ con el usuario del estudiante, recorre sus aulas y le muestra todo resumido y or
   Se abre directo y no dentro de la página porque el formulario guarda el correo de forma
   automática, y para eso Google pide iniciar sesión. Las respuestas se guardan en una hoja de
   cálculo de Google vinculada al formulario.
-- `estilos.css` — estilos compartidos.
+- `estilos.css` — estilos compartidos. Al modificarlo, subir el número de `estilos.css?v=` en
+  `index.html` y `formulario.html`: GitHub Pages deja que el navegador guarde el archivo
+  10 minutos y sin ese cambio los celulares pueden seguir viendo la versión vieja.
 - `escudo_ies5.png` — escudo de la institución.
 - `ilustracion_*.webp` — ilustraciones tomadas del trifolio.
